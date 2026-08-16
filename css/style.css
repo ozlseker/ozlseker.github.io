@@ -361,7 +361,7 @@ main {
 .about-photo {
   position: relative;
   width: 100%;
-  padding-top: 133.33%; /* 3:4 ratio, works in all browsers */
+  padding-top: 88%; /* closer to the Figma crop — was 133.33% (3:4), too tall */
   overflow: hidden;
   border-radius: 8px;
   background-color: #e0e0e0;
@@ -373,6 +373,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%; /* keeps the face framed instead of centering on the chest */
 }
 
 /* ── FOOTER ── */
@@ -486,3 +487,7 @@ main {
   border: 1px dashed #dddddd;
   border-radius: 8px;
 }
+
+/* ── SINGLE-PAGE VIEW SWITCHING ── */
+.view { display: none; }
+.view.is-visible { display: block; }
